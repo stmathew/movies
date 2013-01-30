@@ -11,7 +11,7 @@ class MoviesController < ApplicationController
     @all_ratings = Movie.all_ratings  
      
     @ratings = params[:ratings].keys unless params[:ratings].nil?
-    @ratings ||= []
+    @ratings ||= @all_ratings
 
     @sort = params[:sort]
         
